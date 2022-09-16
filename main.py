@@ -3,6 +3,9 @@ class COut:
         print(other, end='')
         return self
 
+    def __repr__(self):
+        return ''
+
 
 # noinspection SpellCheckingInspection
 cout = COut()
