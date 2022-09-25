@@ -7,6 +7,19 @@ class COut:
         return ''
 
 
+class COut2:
+
+    def __init__(self):
+        self.strings: list[str] = []
+
+    def __lshift__(self, other) -> 'COut2':
+        self.strings.append(str(other))
+        return self
+
+    def __repr__(self) -> str:
+        return ' '.join(self.strings)
+
+
 # noinspection SpellCheckingInspection
 cout = COut()
 
